@@ -39,7 +39,7 @@
     </select>
 
     <select id="findByUserId" parameterType="Long" resultType="HashMap">
-        select p.id, user_id as userId, account, name, category, title, content, views, likes, p.created, p.updated
+        select count(*) as count, sum(likes) as sum
         from post p left join user u on p.user_id = u.id
         where u.id=#{userId}
     </select>
