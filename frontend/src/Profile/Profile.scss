@@ -1,0 +1,137 @@
+.login {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 30vh 10vw;
+  > div {
+    margin: 10px 0;
+    color: #000;
+    > input {
+      border: 1px solid #555;
+      text-align: center;
+      width: 300px;
+      height: 50px;
+      font-size: large;
+      border-radius: 5px;
+      outline-style: none;
+    }
+    > button {
+      border: none;
+      margin: 10px 0;
+      color: #fff;
+      font-size: 15px;
+      background-color: #86e57f;
+      width: 300px;
+      height: 50px;
+      cursor: pointer;
+    }
+  }
+}
+
+.register {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  > div {
+    margin: 10px 0;
+    text-align: center;
+    > input {
+      border: 1px solid #555;
+      width: 300px;
+      height: 30px;
+      font-size: large;
+      margin-top: 10px;
+      border-radius: 5px;
+      outline-style: none;
+      padding: 5px 8px;
+    }
+    > select {
+      width: 320px;
+      height: 40px;
+      font-size: large;
+    }
+  }
+  > button {
+    margin-top: 20px;
+    width: 320px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #86e57f;
+    cursor: pointer;
+  }
+}
+
+.profile-view {
+  position: absolute;
+  outline: 2px solid #000;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  padding: 10vh 15vw;
+  > div {
+    > img {
+      float: right;
+      max-width: 100%;
+      height: auto !important;
+    }
+  }
+  > button {
+    position: absolute;
+    right: 1vw;
+    bottom: 1vh;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #86e57f;
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+  }
+  > p {
+    text-align: center;
+    cursor: pointer;
+    font-size: small;
+  }
+}
+
+.profile-edit {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  > div {
+    margin-top: 10px;
+    > input {
+      margin-left: 10px;
+      border-radius: 5px;
+      outline-style: none;
+      padding: 5px 8px;
+    }
+    > button {
+      margin-top: 20px;
+      position: absolute;
+      right: 1vw;
+      bottom: 1vh;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 15px;
+      background-color: #86e57f;
+      width: 70px;
+      height: 30px;
+      cursor: pointer;
+    }
+    > p {
+      text-align: center;
+      cursor: pointer;
+      font-size: small;
+    }
+  }
+}
