@@ -13,10 +13,10 @@ class UserStore {
         UserStore.__instance = this;
     }
 
-    @observable item = null;
+    @observable user = null;
     @action fetchItem = async (id) => {
         try {
-            this.item = null;
+            this.user = null;
             let response = await axios({
                 url: 'http://localhost:8080/api/user/id?id=' + id,
                 method: 'get',
@@ -27,10 +27,12 @@ class UserStore {
             });
             console.log(response);
             if (response.status === 200) {
-                this.item = response.data;
+                this.user = response.data;
+                return true;
             }
         } catch (e) {
             alert(e.toLocaleString());
+            return false;
         }
     }
 
@@ -79,7 +81,6 @@ class UserStore {
         }
     };
 
-    @observable user = null;
     @action login = async (user) => {
         console.log(user);
         try {

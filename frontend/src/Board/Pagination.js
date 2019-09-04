@@ -14,7 +14,7 @@ const Pagination = ({ itemList, limit }) => {
                 {itemList.map((e, i) => {
                     if (i >= itemList.length / limit) return;
                     return (
-                        <div className={i + 1 === parseInt(page) && 'page'} onClick={handleChange}>
+                        <div key={i + 1} className={i + 1 === parseInt(page) && 'page'} onClick={handleChange}>
                             {i + 1}
                         </div>
                     );

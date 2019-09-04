@@ -114,24 +114,21 @@
       outline-style: none;
       padding: 5px 8px;
     }
-    > button {
-      margin-top: 20px;
-      position: absolute;
-      right: 1vw;
-      bottom: 1vh;
-      border: none;
-      border-radius: 5px;
-      color: #fff;
-      font-size: 15px;
-      background-color: #86e57f;
-      width: 70px;
-      height: 30px;
-      cursor: pointer;
-    }
-    > p {
-      text-align: center;
-      cursor: pointer;
-      font-size: small;
-    }
+  }
+  > button {
+    margin-top: 1vh;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #86e57f;
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+  }
+  > p {
+    cursor: pointer;
+    font-size: small;
+    margin-top: 2vh;
   }
 }

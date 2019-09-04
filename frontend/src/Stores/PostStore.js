@@ -92,6 +92,26 @@ class PostStore {
         }
     }
 
+    @action viewByUserId = async (userId) => {
+        try {
+            this.items = null;
+            let response = await axios({
+                url: 'http://localhost:8080/api/post/userId?userId=' + userId,
+                method: 'get',
+                headers : {
+                    'Content-type': 'application/json; charset=utf-8'
+                },
+                timeout: 3000,
+            });
+            if (response.status === 200) {
+                this.items = response.data;
+                console.log(response.data);
+            }
+        } catch (e) {
+            alert(e.toLocaleString());
+        }
+    }
+
     @observable item = null;
     @action view = async (id) => {
         try {

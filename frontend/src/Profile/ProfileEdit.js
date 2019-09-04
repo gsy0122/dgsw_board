@@ -42,7 +42,7 @@ class ProfileEdit extends Component {
     }
     render() {
         if (this.state.goToLogin) return <Redirect to='/profile' />;
-        if (this.state.goToView) return <Redirect to='/profile/view' />
+        if (this.state.goToView) return <Redirect to='/profile/view' />;
         return (
             <div className='profile-edit'>
                 <div>이름 {this.state.name}</div>
@@ -58,7 +58,7 @@ class ProfileEdit extends Component {
                 <div>프로필 사진
                     <input type='file' onChange={(e) => this.setState({file: e.target.files[0]})}/>
                 </div>
-                <div><button onClick={this.edit}>수정</button></div>
+                <button onClick={this.edit}>수정</button>
                 <p onClick={this.remove}>탈퇴하시겠습니까?</p>
             </div>
         );
@@ -79,11 +79,13 @@ class ProfileEdit extends Component {
             });
         }
         if (await this.props.stores.UserStore.edit(this.state)) {
-            alert('수정이 완료되었습니다.');
-            this.setState({
-                ...this.state,
-                goToView: true
-            });
+            if (await this.props.stores.UserStore.fetchItem(this.state.id)) {
+                alert('수정이 완료되었습니다.');
+                this.setState({
+                    ...this.state,
+                    goToView: true
+                });
+            }
         }
     }
 
